@@ -11,7 +11,6 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            color: white;
             align-items: center;
             justify-content: flex-start; /* Cambiado para subir el formulario */
             min-height: 100vh;
@@ -36,7 +35,7 @@
         .titulo {
             font-size: 24px;
             margin-bottom: 20px;
-            color: #333;
+            color: #fff; /* Título en color blanco */
         }
 
         .text-container {
@@ -99,7 +98,22 @@
         function copiarTexto(elementId) {
             const texto = document.getElementById(elementId).innerText;
             navigator.clipboard.writeText(texto).then(() => {
-                alert("Texto copiado: " + texto);
+                const alerta = document.createElement('div');
+                alerta.textContent = "Copiado";
+                alerta.style.position = 'fixed';
+                alerta.style.top = '20px';
+                alerta.style.left = '50%';
+                alerta.style.transform = 'translateX(-50%)';
+                alerta.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+                alerta.style.color = '#fff';
+                alerta.style.padding = '10px 20px';
+                alerta.style.borderRadius = '5px';
+                alerta.style.zIndex = '1000';
+                document.body.appendChild(alerta);
+
+                setTimeout(() => {
+                    alerta.remove();
+                }, 2000); // La alerta desaparece después de 2 segundos
             }).catch(err => {
                 console.error("Error al copiar el texto: ", err);
             });
