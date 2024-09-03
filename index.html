@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copiar Textos</title>
+    <title>Copiar Textos - Métodos de Pago</title>
     <style>
         /* CSS para asegurar el formato vertical y diseño responsivo */
         body {
@@ -21,42 +21,81 @@
             font-family: Arial, sans-serif;
         }
 
-        .text-container {
-            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para mejorar la legibilidad */
+        .formulario {
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente para mejorar la legibilidad */
             border-radius: 8px;
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: 20px;
             width: 80%;
-            text-align: center;
+            max-width: 400px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .titulo {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .text-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
         }
 
         button {
-            margin-top: 5px;
             padding: 8px 16px;
-            border: none;
+            border: 2px solid #333;
             border-radius: 4px;
-            background-color: #4CAF50; /* Color de fondo del botón */
-            color: white;
+            background-color: white; /* Botón blanco */
+            color: #333;
             cursor: pointer;
             font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        button img {
+            margin-right: 8px; /* Espacio para el ícono */
         }
 
         button:hover {
-            background-color: #45a049; /* Color del botón al pasar el mouse */
+            background-color: #f0f0f0; /* Cambio de color al pasar el mouse */
         }
     </style>
 </head>
 <body>
-    <div class="text-container">
-        <p id="text1">Este es el texto 1</p>
-        <button onclick="copiarTexto('text1')">Copiar</button>
+    <div class="formulario">
+        <h1 class="titulo">Métodos de Pago</h1>
+        
+        <div class="text-container">
+            <p id="text1">Este es el texto 1</p>
+            <button onclick="copiarTexto('text1')">
+                <img src="URL_DEL_ICONO" alt="icono" width="16" height="16"> <!-- Reemplaza con el enlace del icono -->
+                Copiar
+            </button>
+        </div>
+        
+        <div class="text-container">
+            <p id="text2">Este es el texto 2</p>
+            <button onclick="copiarTexto('text2')">
+                <img src="URL_DEL_ICONO" alt="icono" width="16" height="16"> <!-- Reemplaza con el enlace del icono -->
+                Copiar
+            </button>
+        </div>
+
+        <!-- Agrega más textos y botones según sea necesario -->
     </div>
-    <div class="text-container">
-        <p id="text2">Este es el texto 2</p>
-        <button onclick="copiarTexto('text2')">Copiar</button>
-    </div>
-    <!-- Agrega más textos y botones según sea necesario -->
 
     <script>
         function copiarTexto(elementId) {
