@@ -2,10 +2,48 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copiar Textos</title>
     <style>
+        /* CSS para asegurar el formato vertical y diseño responsivo */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('URL_DE_TU_IMAGEN_DE_FONDO'); /* Reemplaza con el enlace de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
         .text-container {
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para mejorar la legibilidad */
+            border-radius: 8px;
+            padding: 10px;
             margin-bottom: 15px;
+            width: 80%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 5px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50; /* Color de fondo del botón */
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Color del botón al pasar el mouse */
         }
     </style>
 </head>
@@ -15,10 +53,6 @@
         <button onclick="copiarTexto('text1')">Copiar</button>
     </div>
     <div class="text-container">
-        <p id="text2">Este es el texto 2</p>
-        <button onclick="copiarTexto('text2')">Copiar</button>
-    </div>
-     <div class="text-container">
         <p id="text2">Este es el texto 2</p>
         <button onclick="copiarTexto('text2')">Copiar</button>
     </div>
