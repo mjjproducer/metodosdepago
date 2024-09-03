@@ -30,12 +30,22 @@
             max-width: 400px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            margin-bottom: 20px; /* Espacio entre los formularios */
         }
 
         .titulo {
             font-size: 24px;
             margin-bottom: 20px;
             color: #fff; /* Título en color blanco */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .titulo img {
+            margin-left: 10px;
+            width: 30px;
+            height: auto;
         }
 
         .text-container {
@@ -74,9 +84,12 @@
     </style>
 </head>
 <body>
+    <!-- Primer formulario -->
     <div class="formulario">
         <h1 class="titulo">Pago Movil</h1>
-        <h2 class="titulo">(Banco de Venezuela)</h2>
+        <h2 class="titulo">Banco de Venezuela 
+            <img src="https://www.facebook.com/photo/?fbid=556021443240226&set=a.556021423240228" alt="icono">
+        </h2>
         
         <div class="text-container">
             <p id="text1">04247844531</p>
@@ -91,8 +104,28 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             </button>
         </div>
+    </div>
 
-        <!-- Agrega más textos y botones según sea necesario -->
+    <!-- Segundo formulario duplicado -->
+    <div class="formulario">
+        <h1 class="titulo">Pago Movil</h1>
+        <h2 class="titulo">Banco de Venezuela 
+            <img src="https://www.facebook.com/photo/?fbid=556021443240226&set=a.556021423240228" alt="icono">
+        </h2>
+        
+        <div class="text-container">
+            <p id="text3">04247844531</p>
+            <button onclick="copiarTexto('text3')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
+        </div>
+        
+        <div class="text-container">
+            <p id="text4">28261229</p>
+            <button onclick="copiarTexto('text4')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
+        </div>
     </div>
 
     <script>
