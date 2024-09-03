@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Copiar Textos</title>
+    <style>
+        .text-container {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <p id="text1">Este es el texto 1</p>
+        <button onclick="copiarTexto('text1')">Copiar</button>
+    </div>
+    <div class="text-container">
+        <p id="text2">Este es el texto 2</p>
+        <button onclick="copiarTexto('text2')">Copiar</button>
+    </div>
+    <!-- Agrega más textos y botones según sea necesario -->
+
+    <script>
+        function copiarTexto(elementId) {
+            const texto = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(texto).then(() => {
+                alert("Texto copiado: " + texto);
+            }).catch(err => {
+                console.error("Error al copiar el texto: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
