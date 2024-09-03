@@ -54,23 +54,21 @@
         }
 
         button {
-            padding: 8px 16px;
-            border: 2px solid #333;
-            border-radius: 4px;
-            background-color: white; /* Botón blanco */
-            color: #333;
+            width: 40px; /* Hacemos el botón más pequeño y cuadrado */
+            height: 40px; /* Hacemos el botón más pequeño y cuadrado */
+            border: none;
+            border-radius: 50%; /* Botón redondo */
+            background-color: transparent; /* Fondo transparente para solo mostrar el ícono */
             cursor: pointer;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
         }
 
         button img {
-            margin-right: 8px; /* Espacio para el ícono */
+            width: 100%; /* Ajusta la imagen al tamaño del botón */
+            height: auto;
         }
 
         button:hover {
-            background-color: #f0f0f0; /* Cambio de color al pasar el mouse */
+            background-color: rgba(200, 200, 200, 0.5); /* Cambio de color al pasar el mouse */
         }
     </style>
 </head>
@@ -81,16 +79,14 @@
         <div class="text-container">
             <p id="text1">Este es el texto 1</p>
             <button onclick="copiarTexto('text1')">
-                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.es%2Ficono-gratis%2Fcopiar_3208725&psig=AOvVaw3_k7UG-zh5JV5FZtH0aYqx&ust=1725481125488000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIiR357Mp4gDFQAAAAAdAAAAABAJ" alt="icono" width="16" height="16">
-                Copiar
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             </button>
         </div>
         
         <div class="text-container">
             <p id="text2">Este es el texto 2</p>
             <button onclick="copiarTexto('text2')">
-                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.es%2Ficono-gratis%2Fcopiar_3208725&psig=AOvVaw3_k7UG-zh5JV5FZtH0aYqx&ust=1725481125488000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIiR357Mp4gDFQAAAAAdAAAAABAJ" alt="icono" width="16" height="16">
-                Copiar
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             </button>
         </div>
 
