@@ -50,11 +50,16 @@
         .text-container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
             margin-bottom: 15px;
             background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 4px;
-            padding: 10px;
+            border-radius: 12px; /* Bordes redondeados al 30% */
+            padding: 8px 12px; /* Ajustado padding para menos altura */
+        }
+
+        .text-container img {
+            margin-right: 10px; /* Espacio entre el icono y el texto */
+            width: 24px; /* Tamaño del icono ajustado */
+            height: auto;
         }
 
         p {
@@ -64,10 +69,9 @@
         }
 
         button {
-            width: 40px;
-            height: 40px;
+            width: 0; /* Botón oculto */
+            height: 0; /* Botón oculto */
             border: none;
-            border-radius: 50%;
             background-color: transparent;
             cursor: pointer;
         }
@@ -102,11 +106,6 @@
             width: 24px;
             height: auto;
         }
-
-        .formulario {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
     </style>
 </head>
 <body>
@@ -119,17 +118,13 @@
         </h2>
         
         <div class="text-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             <p id="text1">04247844531</p>
-            <button onclick="copiarTexto('text1')">
-                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
-            </button>
         </div>
         
         <div class="text-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             <p id="text2">28261229</p>
-            <button onclick="copiarTexto('text2')">
-                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
-            </button>
         </div>
     </div>
 
@@ -140,10 +135,8 @@
         </h2>
         
         <div class="text-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             <p id="text3">01020747970000370840</p>
-            <button onclick="copiarTexto('text3')">
-                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
-            </button>
         </div>
     </div>
 
@@ -166,10 +159,8 @@
         </div>
         
         <div class="text-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             <p id="text4">rolandojrch@gmail.com</p>
-            <button onclick="copiarTexto('text4')">
-                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
-            </button>
         </div>
     </div>
 
