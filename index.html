@@ -12,31 +12,38 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Cambiado para subir el formulario */
+            justify-content: flex-start;
             min-height: 100vh;
-            background-image: url('https://github.com/mjjproducer/metodosdepago/blob/main/WhatsApp%20Image%202024-05-05%20at%2010.29.00%20PM.jpeg?raw=true'); /* Reemplaza con el enlace de tu imagen */
+            background-image: url('https://github.com/mjjproducer/metodosdepago/blob/main/WhatsApp%20Image%202024-05-05%20at%2010.29.00%20PM.jpeg?raw=true');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             font-family: Arial, sans-serif;
-            padding-top: 50px; /* Espacio superior para ajustar la posición del formulario */
+            padding-top: 50px;
         }
 
         .formulario {
-            background: rgba(255, 255, 255, 0.2); /* Fondo blanco con opacidad del 20% */
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 8px;
             padding: 20px;
             width: 80%;
             max-width: 400px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin-bottom: 20px; /* Espacio entre los formularios */
+            margin-bottom: 20px;
+        }
+
+        .titulo-principal {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #fff;
+            text-align: center;
         }
 
         .titulo {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #fff; /* Título en color blanco */
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -65,25 +72,29 @@
         }
 
         button {
-            width: 40px; /* Hacemos el botón más pequeño y cuadrado */
-            height: 40px; /* Hacemos el botón más pequeño y cuadrado */
+            width: 40px;
+            height: 40px;
             border: none;
-            border-radius: 50%; /* Botón redondo */
-            background-color: transparent; /* Fondo transparente para solo mostrar el ícono */
+            border-radius: 50%;
+            background-color: transparent;
             cursor: pointer;
         }
 
         button img {
-            width: 100%; /* Ajusta la imagen al tamaño del botón */
+            width: 100%;
             height: auto;
         }
 
         button:hover {
-            background-color: rgba(200, 200, 200, 0.5); /* Cambio de color al pasar el mouse */
+            background-color: rgba(200, 200, 200, 0.5);
         }
     </style>
 </head>
 <body>
+
+    <!-- Título principal -->
+    <h1 class="titulo-principal">Métodos de Pago</h1>
+
     <!-- Primer formulario -->
     <div class="formulario">
         <h1 class="titulo">Pago Movil</h1>
@@ -120,30 +131,35 @@
             </button>
         </div>
     </div>
+
+    <!-- Tercer formulario con agrupación de líneas -->
     <div class="formulario">
+        <div class="titulo" style="margin-bottom: 20px;">
+            <span>Zelle 
+                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/a298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+            </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Binance 
+                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/b298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+            </span>
+        </div>
+
+        <div class="titulo">
+            <span>Paypal 
+                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/pa298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+            </span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Zinli 
+                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/z298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+            </span>
+        </div>
         
-        <h1 class="titulo">Zelle
-            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/a298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-        </h1>
-         <h1 class="titulo">Binance
-            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/b298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-        </h1>
-          <h1 class="titulo">Paypal
-            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/pa298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-        </h1>
-          <h1 class="titulo">Zinli
-            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/z298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-        </h1>
-        
-        <div class="text-container">
-            <p id="text3">rolandojrch@gmail.com</p>
-            <button onclick="copiarTexto('text3')">
+        <div class="text-container" style="margin-top: 20px;">
+            <p id="text4">rolandojrch@gmail.com</p>
+            <button onclick="copiarTexto('text4')">
                 <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             </button>
         </div>
-        
-        
-    
     </div>
 
     <script>
