@@ -50,15 +50,28 @@
         .text-container {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
             background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 12px; /* Bordes redondeados al 30% */
-            padding: 8px 12px; /* Ajustado padding para menos altura */
+            border-radius: 12px; /* Esquinas redondeadas al 30% */
+            padding: 5px;
+            margin-bottom: 15px;
+            height: 40px; /* Menor altura */
         }
 
-        .text-container img {
+        .text-container button {
+            width: 30px;
+            height: 30px;
             margin-right: 10px; /* Espacio entre el icono y el texto */
-            width: 24px; /* Tamaño del icono ajustado */
+            border: none;
+            border-radius: 50%;
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-container button img {
+            width: 100%;
             height: auto;
         }
 
@@ -66,24 +79,6 @@
             margin: 0;
             font-size: 16px;
             color: #333;
-        }
-
-        button {
-            width: 0; /* Botón oculto */
-            height: 0; /* Botón oculto */
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-        }
-
-        button img {
-            width: 100%;
-            height: auto;
-            vertical-align: middle;
-        }
-
-        button:hover {
-            background-color: rgba(200, 200, 200, 0.5);
         }
 
         .double-line {
@@ -118,12 +113,16 @@
         </h2>
         
         <div class="text-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            <button onclick="copiarTexto('text1')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
             <p id="text1">04247844531</p>
         </div>
         
         <div class="text-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            <button onclick="copiarTexto('text2')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
             <p id="text2">28261229</p>
         </div>
     </div>
@@ -135,7 +134,9 @@
         </h2>
         
         <div class="text-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            <button onclick="copiarTexto('text3')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
             <p id="text3">01020747970000370840</p>
         </div>
     </div>
@@ -159,7 +160,9 @@
         </div>
         
         <div class="text-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            <button onclick="copiarTexto('text4')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
             <p id="text4">rolandojrch@gmail.com</p>
         </div>
     </div>
@@ -191,4 +194,5 @@
     </script>
 </body>
 </html>
+
 
