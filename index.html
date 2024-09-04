@@ -5,38 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copiar Textos - Métodos de Pago</title>
     <style>
-        /* CSS para asegurar el formato vertical y diseño responsivo */
         body {
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Cambiado para subir el formulario */
+            justify-content: flex-start;
             min-height: 100vh;
-            background-image: url('https://github.com/mjjproducer/metodosdepago/blob/main/WhatsApp%20Image%202024-05-05%20at%2010.29.00%20PM.jpeg?raw=true'); /* Reemplaza con el enlace de tu imagen */
+            background-image: url('https://github.com/mjjproducer/metodosdepago/blob/main/WhatsApp%20Image%202024-05-05%20at%2010.29.00%20PM.jpeg?raw=true');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             font-family: Arial, sans-serif;
-            padding-top: 50px; /* Espacio superior para ajustar la posición del formulario */
+            padding-top: 50px;
         }
 
         .formulario {
-            background: rgba(255, 255, 255, 0.2); /* Fondo blanco con opacidad del 20% */
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 8px;
             padding: 20px;
             width: 80%;
             max-width: 400px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin-bottom: 20px; /* Espacio entre los formularios */
+            margin-bottom: 20px;
         }
 
         .titulo {
             font-size: 24px;
-            margin-bottom: 10px; /* Reducido el margen inferior para acercar los títulos */
-            color: #fff; /* Título en color blanco */
+            margin-bottom: 10px;
+            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -65,44 +64,54 @@
         }
 
         button {
-            width: 40px; /* Hacemos el botón más pequeño y cuadrado */
-            height: 40px; /* Hacemos el botón más pequeño y cuadrado */
+            width: 40px;
+            height: 40px;
             border: none;
-            border-radius: 50%; /* Botón redondo */
-            background-color: transparent; /* Fondo transparente para solo mostrar el ícono */
+            border-radius: 50%;
+            background-color: transparent;
             cursor: pointer;
         }
 
         button img {
-            width: 100%; /* Ajusta la imagen al tamaño del botón */
+            width: 100%;
             height: auto;
-            vertical-align: middle; /* Centra el ícono verticalmente con el texto */
+            vertical-align: middle;
         }
 
         button:hover {
-            background-color: rgba(200, 200, 200, 0.5); /* Cambio de color al pasar el mouse */
+            background-color: rgba(200, 200, 200, 0.5);
         }
 
         .double-line {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
+            justify-content: space-around;
+            margin-bottom: 5px;
         }
 
-        .double-line .formulario {
+        .double-line .titulo {
             flex: 1;
-            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 3px;
         }
 
-        .double-line .formulario:last-child {
-            margin-right: 0;
+        .double-line .titulo img {
+            margin-left: 5px;
+            width: 24px;
+            height: auto;
+        }
+
+        .formulario {
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <h1 class="titulo">Métodos de Pago</h1>
 
-    <!-- Primer formulario -->
     <div class="formulario">
         <h1 class="titulo">Pago Movil</h1>
         <h2 class="titulo">Banco de Venezuela 
@@ -124,7 +133,6 @@
         </div>
     </div>
 
-    <!-- Segundo formulario duplicado -->
     <div class="formulario">
         <h1 class="titulo">Transferencia</h1>
         <h2 class="titulo">Banco de Venezuela 
@@ -139,7 +147,6 @@
         </div>
     </div>
 
-    <!-- Tercer formulario con dos líneas de métodos de pago -->
     <div class="formulario">
         <div class="double-line">
             <h1 class="titulo">Zelle
@@ -185,7 +192,7 @@
 
                 setTimeout(() => {
                     alerta.remove();
-                }, 2000); // La alerta desaparece después de 2 segundos
+                }, 2000);
             }).catch(err => {
                 console.error("Error al copiar el texto: ", err);
             });
