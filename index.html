@@ -33,16 +33,9 @@
             margin-bottom: 20px;
         }
 
-        .titulo-principal {
-            font-size: 28px;
-            margin-bottom: 30px;
-            color: #fff;
-            text-align: center;
-        }
-
         .titulo {
-            font-size: 22px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 20px;
             color: #fff;
             display: flex;
             align-items: center;
@@ -65,36 +58,38 @@
             padding: 10px;
         }
 
-        p {
+        .text-container p {
             margin: 0;
             font-size: 16px;
             color: #333;
+            flex: 1;
+            text-align: left;
         }
 
-        button {
-            width: 40px;
-            height: 40px;
+        .text-container button {
+            width: 35px;
+            height: 35px;
             border: none;
             border-radius: 50%;
             background-color: transparent;
             cursor: pointer;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        button img {
+        .text-container button img {
             width: 100%;
             height: auto;
         }
 
-        button:hover {
+        .text-container button:hover {
             background-color: rgba(200, 200, 200, 0.5);
         }
     </style>
 </head>
 <body>
-
-    <!-- Título principal -->
-    <h1 class="titulo-principal">Métodos de Pago</h1>
-
     <!-- Primer formulario -->
     <div class="formulario">
         <h1 class="titulo">Pago Movil</h1>
@@ -131,32 +126,45 @@
             </button>
         </div>
     </div>
-
-    <!-- Tercer formulario con agrupación de líneas -->
+    
+    <!-- Tercer formulario -->
     <div class="formulario">
-        <div class="titulo" style="margin-bottom: 20px;">
-            <span>Zelle 
-                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/a298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-            </span>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <span>Binance 
-                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/b298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-            </span>
-        </div>
-
-        <div class="titulo">
-            <span>Paypal 
-                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/pa298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-            </span>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <span>Zinli 
-                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/z298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-            </span>
-        </div>
-        
-        <div class="text-container" style="margin-top: 20px;">
+        <h1 class="titulo">Zelle
+            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/a298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+        </h1>
+        <div class="text-container">
             <p id="text4">rolandojrch@gmail.com</p>
             <button onclick="copiarTexto('text4')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
+        </div>
+        
+        <h1 class="titulo">Binance
+            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/b298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+        </h1>
+        <div class="text-container">
+            <p id="text5">Binance Text</p>
+            <button onclick="copiarTexto('text5')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
+        </div>
+        
+        <h1 class="titulo">Paypal
+            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/pa298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+        </h1>
+        <div class="text-container">
+            <p id="text6">Paypal Text</p>
+            <button onclick="copiarTexto('text6')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
+        </div>
+        
+        <h1 class="titulo">Zinli
+            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/z298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+        </h1>
+        <div class="text-container">
+            <p id="text7">Zinli Text</p>
+            <button onclick="copiarTexto('text7')">
                 <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             </button>
         </div>
@@ -181,7 +189,7 @@
 
                 setTimeout(() => {
                     alerta.remove();
-                }, 2000); // La alerta desaparece después de 2 segundos
+                }, 2000);
             }).catch(err => {
                 console.error("Error al copiar el texto: ", err);
             });
