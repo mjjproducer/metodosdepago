@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copiar Textos - Métodos de Pago</title>
     <style>
-        /* CSS para asegurar el formato vertical y diseño responsivo */
         body {
             margin: 0;
             padding: 0;
@@ -19,7 +18,7 @@
             background-position: center;
             background-repeat: no-repeat;
             font-family: Arial, sans-serif;
-            padding-top: 20px;
+            padding-top: 20px; /* Ajustado para mover el título más cerca del borde superior */
         }
 
         .formulario {
@@ -35,7 +34,7 @@
 
         .titulo {
             font-size: 24px;
-            margin-bottom: 10px;
+            margin-bottom: 5px; /* Reducido para menor espacio entre textos */
             color: #fff;
             display: flex;
             align-items: center;
@@ -51,84 +50,126 @@
         .text-container {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: space-between;
             margin-bottom: 15px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 4px;
             padding: 10px;
         }
 
-        .text-container img {
-            margin-right: 10px;
-            width: 30px; /* Ajusta el tamaño del icono según sea necesario */
-            height: auto;
-        }
-
         p {
             margin: 0;
             font-size: 16px;
             color: #333;
-            border-radius: 12px; /* Bordes redondeados */
-            padding: 5px 10px; /* Ajusta el padding según sea necesario */
-            background-color: #fff; /* Fondo blanco para el text content */
         }
 
         button {
-            width: 0; /* Botón oculto */
-            height: 0; /* Botón oculto */
+            width: 40px;
+            height: 40px;
             border: none;
+            border-radius: 50%;
             background-color: transparent;
             cursor: pointer;
+        }
+
+        button img {
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        button:hover {
+            background-color: rgba(200, 200, 200, 0.5);
+        }
+
+        .double-line {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 5px;
+        }
+
+        .double-line .titulo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 3px;
+        }
+
+        .double-line .titulo img {
+            margin-left: 5px;
+            width: 24px;
+            height: auto;
+        }
+
+        .formulario {
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Primer formulario -->
+    <h1 class="titulo">Métodos de Pago</h1>
+
     <div class="formulario">
-        <h1 class="titulo">Pago Movil</h1>
-        <h2 class="titulo">Banco de Venezuela 
+        <h1 class="titulo" style="margin-bottom: 2px;">Pago Movil</h1> <!-- Reducido espacio -->
+        <h2 class="titulo" style="margin-bottom: 2px;">Banco de Venezuela 
             <img src="https://github.com/mjjproducer/metodosdepago/blob/main/W298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
         </h2>
         
         <div class="text-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             <p id="text1">04247844531</p>
+            <button onclick="copiarTexto('text1')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
         </div>
         
         <div class="text-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             <p id="text2">28261229</p>
+            <button onclick="copiarTexto('text2')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
         </div>
     </div>
 
-    <!-- Segundo formulario duplicado -->
     <div class="formulario">
-        <h1 class="titulo">Transferencia</h1>
-        <h2 class="titulo">Banco de Venezuela 
+        <h1 class="titulo" style="margin-bottom: 2px;">Transferencia</h1> <!-- Reducido espacio -->
+        <h2 class="titulo" style="margin-bottom: 2px;">Banco de Venezuela 
             <img src="https://github.com/mjjproducer/metodosdepago/blob/main/W298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
         </h2>
         
         <div class="text-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
             <p id="text3">01020747970000370840</p>
+            <button onclick="copiarTexto('text3')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
         </div>
     </div>
 
     <div class="formulario">
-        <h1 class="titulo">Métodos de Pago</h1>
-        
-        <div class="text-container">
-            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/a298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-            <p id="text4">Zelle</p>
-            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/b298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-            <p id="text5">Binance</p>
+        <div class="double-line">
+            <h1 class="titulo">Zelle
+                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/a298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+            </h1>
+            <h1 class="titulo">Binance
+                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/b298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+            </h1>
+        </div>
+        <div class="double-line">
+            <h1 class="titulo">Paypal
+                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/pa298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+            </h1>
+            <h1 class="titulo">Zinli
+                <img src="https://github.com/mjjproducer/metodosdepago/blob/main/z298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
+            </h1>
         </div>
         
         <div class="text-container">
-            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/pa298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-            <p id="text6">Paypal</p>
-            <img src="https://github.com/mjjproducer/metodosdepago/blob/main/z298221281_7879694008771402_3679607077334172082_n%20(1)%20copia.png?raw=true" alt="icono">
-            <p id="text7">Zinli</p>
+            <p id="text4">rolandojrch@gmail.com</p>
+            <button onclick="copiarTexto('text4')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3208/3208725.png" alt="icono">
+            </button>
         </div>
     </div>
 
@@ -151,7 +192,7 @@
 
                 setTimeout(() => {
                     alerta.remove();
-                }, 2000); // La alerta desaparece después de 2 segundos
+                }, 2000);
             }).catch(err => {
                 console.error("Error al copiar el texto: ", err);
             });
@@ -159,5 +200,4 @@
     </script>
 </body>
 </html>
-
 
